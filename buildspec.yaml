@@ -1,9 +1,10 @@
-version: 0.2
+
+version: 0.1
 phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket tomas-test-cicd-bucket 
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket bucket-name 
                                    --output-template-file NewSamTemplate.yaml
 artifacts:
   type: zip
